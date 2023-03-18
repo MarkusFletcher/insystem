@@ -1,0 +1,23 @@
+.hero {
+    padding-top: $headerMinHeight;
+    background-image: url(../images/hero-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 850px;
+
+    &__content {
+        font-size: 20px;
+        line-height: 1.4;
+        padding-top: 103px;
+    }
+
+    &__title {
+        margin-bottom: 80px;
+    }
+
+    &__actions {
+        margin-top: 80px;
+        display: flex;
+        gap: 30px;
+    }
+}

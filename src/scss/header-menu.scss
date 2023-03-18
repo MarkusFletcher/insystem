@@ -1,0 +1,27 @@
+.header-menu {
+    &__btn {
+        display: none;
+    }
+
+    &__list {
+        list-style-type: none;
+        display: flex;
+    }
+
+    &__item {
+        margin-left: 25px;
+    }
+
+    &__link {
+        font-size: 13px;
+        font-weight: 600;
+        color: $colorText_light;
+        transition: color 0.3s;
+        text-decoration: none;
+        text-transform: uppercase;
+        &:hover,
+        &--current {
+            color: $colorPrimary;
+        }
+    }
+}

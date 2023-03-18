@@ -1,0 +1,27 @@
+// Переменные----------------------------------------------------------------------------------
+@import "variables";
+
+// Миксины-------------------------------------------------------------------------------------
+@import "mixins";
+
+// Шрифты--------------------------------------------------------------------------------------
+@import "fonts";
+
+// Normalize
+// @import "reset/reboot";
+// @import "reset/normalize";
+// @import "reset/destyle";
+@import "reset/sanitize";
+@import "reset/html5doctor";
+
+@import "style";
+@import "button";
+
+// Блоки---------------------------------------------------------------------------------------
+//@import "../blocks";
+@import "header.scss";
+@import "logo.scss";
+@import "header-menu.scss";
+@import "hero.scss";
+
+@import "footer.scss";

@@ -1,0 +1,27 @@
+// Breakpoints--------------------------------------------------------------------------------------
+$sm: 479px; // Мобильный - Small (sm)
+$md: 767px; // Средний - Medium (md)
+$lg: 991px; // Большой - Large (lg)
+$xl: 1199px; // Очень большой - Extra large (xl)
+$xxl: 1399px; // Огромный - Extra extra large (xxl)
+
+// Ширина контейнера
+$maxWidthContainer: 1199;
+
+// Высота header & footer
+$headerMinHeight: 100px;
+$footerMinHeight: 80px;
+
+// Шрифт по умолчанию-------------------------------------------------------------------------------
+$fontFamily: "Lato", sans-serif;
+$fontSize: 1rem;
+
+// Цвета--------------------------------------------------------------------------------------------
+$colorPrimary: hsl(204, 69%, 55%);
+$colorPrimary_hover: hsl(204, 69%, 50%);
+$colorPrimary_reflection: hsl(199, 33%, 80%);
+
+$colorText: hsl(0, 0%, 0%);
+$colorText_dark: hsl(230, 7%, 18%);
+$colorText_light: hsl(0, 0%, 100%);
+$colorText_blue: $colorPrimary;

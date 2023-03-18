@@ -1,0 +1,52 @@
+html {
+    height: 100%;
+}
+
+body {
+    background-color: #333;
+    display: grid;
+    min-height: 100%;
+}
+
+main {
+    min-height: calc(100vh - 80px);
+}
+
+.container {
+    max-width: $maxWidthContainer + px;
+    margin: 0 auto;
+    padding: 0 15px;
+    @media (max-width: $maxWidthContainer) {
+       max-width: $maxWidthContainer + px;
+    }
+}
+
+h1 {
+    font-size: 48px;
+    font-weight: 700;
+}
+
+.text {
+    &-bold {
+        font-weight: 700;
+    }
+    &-blue {
+        color: $colorText_blue;
+    }
+    &-center {
+        text-align: center;
+    }
+}
+
+.list {
+    &-dash {
+        list-style-type: none;
+        li {
+            &::before {
+                content: '\2013';
+                padding-left: 6px;
+                padding-right: 6px;
+            }
+        }
+    }
+}
