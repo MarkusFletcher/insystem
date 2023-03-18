@@ -6,10 +6,10 @@
     &__list {
         list-style-type: none;
         display: flex;
+        gap: 60px;
     }
 
     &__item {
-        margin-left: 25px;
     }
 
     &__link {

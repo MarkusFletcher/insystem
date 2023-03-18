@@ -8,15 +8,17 @@
     &__content {
         font-size: 20px;
         line-height: 1.4;
-        padding-top: 103px;
+        padding-top: 125px;
     }
 
     &__title {
-        margin-bottom: 80px;
+        line-height: 1.2;
+        text-transform: uppercase;
+        margin-bottom: 88px;
     }
 
     &__actions {
-        margin-top: 80px;
+        margin-top: 78px;
         display: flex;
         gap: 30px;
     }
