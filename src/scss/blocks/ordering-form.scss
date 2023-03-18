@@ -1,0 +1,13 @@
+.ordering-form {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    
+    &__range {
+        grid-column: span 2;
+    }
+
+    &__submit-button {
+        grid-column: 2/3;
+    }
+}
