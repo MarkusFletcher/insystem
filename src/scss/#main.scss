@@ -14,14 +14,21 @@
 @import "reset/sanitize";
 @import "reset/html5doctor";
 
-@import "style";
-@import "button";
 
 // Блоки---------------------------------------------------------------------------------------
 //@import "../blocks";
-@import "header.scss";
-@import "logo.scss";
-@import "header-menu.scss";
-@import "hero.scss";
+@import "style";
+@import "layout";
 
-@import "footer.scss";
+@import "ui/button";
+@import "ui/input";
+
+@import "sections/header";
+@import "sections/footer";
+@import "sections/hero";
+@import "sections/ordering";
+
+@import "blocks/logo";
+@import "blocks/header-menu";
+@import "blocks/ordering-form";
+
