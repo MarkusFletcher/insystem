@@ -11,7 +11,7 @@ export const pathes = {
 		js: `${buildFolder}/js/`,
 		images: `${buildFolder}/images/`,
 		svg: `${buildFolder}/svg/`,
-		files: `${buildFolder}/files/`,
+		fonts: `${buildFolder}/fonts/`,
 	},
 	src: {
 		html: `${srcFolder}/*.html`,
@@ -19,7 +19,7 @@ export const pathes = {
 		js: `${srcFolder}/js/**/*.*`,
 		images: `${srcFolder}/images/**/*.{jpg,jpeg,png,PNG,gif,webp}`,
 		svg: `${srcFolder}/svg/**/*.svg`,
-		files: `${srcFolder}/files/**/*.*`,
+		fonts: `${srcFolder}/fonts/**/*.*`,
 	},
 	watch: {
 		html: `${srcFolder}/**/*.html`,
@@ -27,7 +27,7 @@ export const pathes = {
 		js: `${srcFolder}/js/**/*.js`,
 		images: `${srcFolder}/images/**/*.{jpg,jpeg,png,PNG,gif,webp}`,
 		svg: `${srcFolder}/svg/**/*.svg`,
-		files: `${srcFolder}/files/**/*.*`,
+		fonts: `${srcFolder}/fonts/**/*.*`,
 	},
 	clean: buildFolder,
 	buildFolder: buildFolder,

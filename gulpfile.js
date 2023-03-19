@@ -14,7 +14,7 @@ global.app = {
 }
 
 // Импорт задач
-import copy from './gulp/tasks/copy.js'
+import fonts from './gulp/tasks/fonts.js'
 import clear from './gulp/tasks/clear.js'
 import html from './gulp/tasks/html.js'
 import scss from './gulp/tasks/scss.js'
@@ -26,13 +26,13 @@ import server from './gulp/tasks/server.js'
 // Построение сценариев задач
 const dev = gulp.series(
 	clear,
-	gulp.parallel(copy, html, scss, js, images, svg),
+	gulp.parallel(fonts, html, scss, js, images, svg),
 	gulp.parallel(watcher, server)
 )
 
 // Наблюдатель
 function watcher() {
-	gulp.watch(pathes.watch.files, copy)
+	gulp.watch(pathes.watch.fonts, fonts)
 	gulp.watch(pathes.watch.html, html)
 	gulp.watch(pathes.watch.scss, scss)
 	gulp.watch(pathes.watch.js, js)
