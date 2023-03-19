@@ -1,0 +1,12 @@
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+    display: grid;
+}
+
+main {
+    min-height: calc(100vh - 80px);
+}
