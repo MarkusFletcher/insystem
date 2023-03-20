@@ -1,0 +1,10 @@
+.contacts {
+	&__item {
+		text-decoration: none;
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		font-size: 13px;
+		color: #fff;
+	}
+}

@@ -1,16 +1,33 @@
 .footer {
-    min-height: 80px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    min-height: $footerMinHeight;
     color: $colorText_light;
 
     &__container {
         display: flex;
         flex-direction: row;
         align-items: center;
+        gap: 20px;
         justify-content: space-between;
-        min-height: $headerMinHeight;
+        height: 100%;
+
+        @media (max-width: $md) {
+            flex-direction: column-reverse;
+        }
     }
 
     &__copy {
         font-size: 13px;
+    }
+
+    &__payment {
+        display: flex;
+        gap: 38px;
+    }
+
+    &__contacts {
+        display: flex;
+        gap: 38px;
     }
 }
