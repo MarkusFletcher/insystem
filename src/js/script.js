@@ -1,5 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
     inputRanges()
+    handleHeaderMenu()
+
+    document.querySelector('.ordering__form').addEventListener('submit',e => {
+        e.preventDefault();
+        console.dir(e.target)
+    })
 })
 
 const inputRanges = () => {
@@ -12,4 +18,13 @@ const inputRanges = () => {
             value.innerHTML = `${e.target.value} %`
         })
     })
+}
+
+const handleHeaderMenu = () => {
+    const buttonToggleMenu = document.querySelector('[data-header-menu="toggle"]');
+    const headerMenu = document.querySelector('[data-header-menu="menu"]');
+
+    buttonToggleMenu.onclick = () => {
+        headerMenu.classList.toggle('header__menu--show');
+    }
 }
