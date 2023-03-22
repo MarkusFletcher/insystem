@@ -1,4 +1,8 @@
+import { Select } from './classes/select.js'
+
 document.addEventListener('DOMContentLoaded', () => {
+    const select1 = new Select('#select1')
+
     inputRanges()
     handleHeaderMenu()
 
