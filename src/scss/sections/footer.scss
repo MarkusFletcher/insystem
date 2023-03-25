@@ -24,10 +24,31 @@
     &__payment {
         display: flex;
         gap: 38px;
+        @media (max-width: $md) {
+            gap: 16px;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
     }
 
     &__contacts {
         display: flex;
         gap: 38px;
+        @media (max-width: $md) {
+            gap: 16px;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+    }
+
+    &__separator {
+        width: 1px;
+        height: 18px;
+        background-color: #C3C3C3;
+
+        @media (max-width: $md) {
+            width: 18px;
+            height: 1px;
+        }
     }
 }
