@@ -1,6 +1,15 @@
 .ordering {
     background-color: #272733;
+    background-image: url(../images/ordering-bg.png);
+    background-position: center;
+    // background-size: cover;
+    background-repeat: no-repeat;
     color: #fff;
+    
+    @media (min-width: $xxl) {
+        background-position: center top -15px;
+        background-size: contain;
+    }
 
     &__container {
         padding-top: 121px;
@@ -24,6 +33,7 @@
     &__steps {
         display: flex;
         justify-content: space-between;
+        gap: 10px;
         margin-bottom: 95px;
 
         @media (max-width: $md) {
@@ -80,6 +90,11 @@
         display: flex;
         justify-content: center;
         align-items: center;
+
+        @media (max-width: $md) {
+            height: 80px;
+            width: 80px;
+        }
     }
 
     &__form {
