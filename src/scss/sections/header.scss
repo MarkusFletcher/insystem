@@ -4,7 +4,7 @@
     top: 0;
     left: 0;
     right: 0;
-    z-index: 10;
+    z-index: 200;
 
     &__container {
         display: flex;
@@ -27,18 +27,22 @@
             position: absolute;
             left: 0;
             width: 100vw;
+            transition: all .4s;
+            opacity: 0;
         }
         &--show {
             @media (max-width: $md) {
-               transform: translateX(0);
+                opacity: 1;
+                transform: translateX(0);
             }
         }
     }
 
     &__toggle-menu {
         display: none;
-        width: 40px;
-        height: 40px;
+        width: 60px;
+        height: 60px;
+        border: none;
         background-color: transparent;
         @media (max-width: $md) {
            display: block;

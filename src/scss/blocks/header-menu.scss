@@ -7,9 +7,21 @@
         list-style-type: none;
         display: flex;
         gap: 60px;
+
+        @media (max-width: $md) {
+            flex-direction: column;
+            background-color: rgba($color: #10101d, $alpha: 0.9);
+            align-items: center;
+            gap: 10px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
     }
 
     &__item {
+        @media (max-width: $md) {
+            width: 100%;
+        }
     }
 
     &__link {
@@ -22,6 +34,12 @@
         &:hover,
         &--current {
             color: $colorPrimary;
+        }
+        @media (max-width: $md) {
+            display: block;
+            padding: 10px 24px 10px 10px;
+            font-size: 16px;
+            text-align: center;
         }
     }
 }
