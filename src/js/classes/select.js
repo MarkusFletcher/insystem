@@ -21,7 +21,6 @@ const getTemplate = (options = [], placeholder) => {
 
 export class Select {
 	constructor(selector, placeholder) {
-		
 		this.$select = document.querySelector(selector)
 		this.$options = this.$select.querySelectorAll('option')
 		this.options = [...this.$options].map((el, idx) => {

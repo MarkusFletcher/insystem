@@ -1,7 +1,7 @@
 import { Select } from './classes/select.js'
 
 document.addEventListener('DOMContentLoaded', () => {
-    const select1 = new Select('#select1')
+    const select1 = new Select('#select1', 'Выберите тип системы')
 
     inputRanges()
     handleHeaderMenu()
@@ -25,10 +25,15 @@ const inputRanges = () => {
 }
 
 const handleHeaderMenu = () => {
-    const buttonToggleMenu = document.querySelector('[data-header-menu="toggle"]');
-    const headerMenu = document.querySelector('[data-header-menu="menu"]');
+    const buttonToggleMenu = document.querySelector('[data-header-menu="toggle"]')
+    const headerMenu = document.querySelector('[data-header-menu="menu"]')
 
     buttonToggleMenu.onclick = () => {
-        headerMenu.classList.toggle('header__menu--show');
+        headerMenu.classList.toggle('header-menu--show')
+        toggleBodyScroll()
     }
+}
+
+const toggleBodyScroll = () => {
+    document.querySelector('html').classList.toggle('scroll-disable')
 }
