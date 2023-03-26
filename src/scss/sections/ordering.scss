@@ -1,10 +1,10 @@
 .ordering {
-    background-color: #272733;
+    background-color: hsl(240, 13%, 18%);
     background-image: url(../images/ordering-bg.png);
     background-position: center;
-    // background-size: cover;
+    background-size: cover;
     background-repeat: no-repeat;
-    color: #fff;
+    color: hsl(0, 0%, 100%);
     
     @media (min-width: $xxl) {
         background-position: center top -15px;
@@ -12,38 +12,70 @@
     }
 
     &__container {
-        padding-top: 121px;
-        padding-bottom: 151px;
+        padding-top: 120px;
+        padding-bottom: 150px;
+
+        @media (max-width: $md) {
+            padding-top: 80px;
+            padding-bottom: 120px;
+        }
+        @media (max-width: $sm) {
+            padding-top: 60px;
+            padding-bottom: 100px;
+        }
     }
 
     &__header {
-        margin-bottom: 80px;
+        margin-bottom: 82px;
+
+        @media (max-width: $md) {
+            margin-bottom: 60px;
+        }
+        @media (max-width: $sm) {
+            margin-bottom: 40px;
+        }
     }
 
     &__title {
         text-transform: uppercase;
-        margin-bottom: 35px;
+        max-width: 800px;
+        margin-bottom: 38px;
+        margin-right: auto;
+        margin-left: auto;
     }
 
     &__notice {
-        color: #BBBBBB;
+        color: hsl(0, 0%, 73%);
         font-size: 18px;
+        max-width: 800px;
+        margin-right: auto;
+        margin-left: auto;
     }
 
     &__steps {
-        display: flex;
-        justify-content: space-between;
-        gap: 10px;
-        margin-bottom: 95px;
+        
+        margin-bottom: 84px;
 
         @media (max-width: $md) {
-            flex-direction: column;
-            gap: 20px;
             padding-left: 8vw;
         }
 
         @media (max-width: $sm) {
+            margin-bottom: 60px;
             padding-left: 0;
+        }
+    }
+
+    &__steps-row {
+        display: flex;
+        justify-content: center;
+        flex-wrap: no-wrap;
+        gap: 10px;
+        margin-bottom: 20px;
+
+        @media (max-width: $md) {
+            flex-direction: column;
+            gap: 20px;
         }
     }
 
@@ -51,10 +83,11 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 20px;
-        width: 25%;
+        gap: 22px;
+        flex: 0 1 calc(20% - 16px);
         text-align: center;
         z-index: 1;
+        position: relative;
 
         @media (max-width: $md) {
             flex-direction: row;
@@ -65,18 +98,34 @@
 
     &__separator {
         position: relative;
+
         &::before {
-            content: '.....';
+            content: '\2063\25CF\25CF\25CF\25CF\25CF';
             font-family: serif;
-            font-size: 50px;
-            letter-spacing: .7vw;
+            font-size: 12px;
+            letter-spacing: 19px;
             position: absolute;
-            top: 10px;
-            transform: translateX(calc(-50% + .35vw));
+            top: 42px;
+            left: 0;
+            transform: translateX(-50%);
+
+            @media (max-width: $maxWidthContainer + px) {
+                letter-spacing: 1.3vw;
+            }
+
+            @media (max-width: $lg) {
+                content: '\2063\25CF\25CF\25CF';
+                letter-spacing: 1.5vw;
+            }
+
             @media (max-width: $md) {
                 content: '';
                 display: none;
             }
+        }
+
+        @media (max-width: $md) {
+            display: none;
         }
     }
 
@@ -84,9 +133,9 @@
         flex-shrink: 0;
         height: 100px;
         width: 100px;
-        border: 5px solid $colorPrimary_reflection;
+        border: 5px solid $color-primary_reflection;
         border-radius: 50%;
-        background-color: $colorPrimary;
+        background-color: $color-primary;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -95,6 +144,10 @@
             height: 80px;
             width: 80px;
         }
+    }
+
+    &__step-label {
+        line-height: 1.2;
     }
 
     &__form {

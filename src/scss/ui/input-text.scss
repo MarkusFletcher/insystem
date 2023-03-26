@@ -1,13 +1,22 @@
 .input-text {
-    background-color: #DFDFE1;
-    color: #272733;
+    background-color: hsl(240, 3%, 88%);
+    color: hsl(240, 13%, 18%);
     font-size: 18px;
     padding: 10px 12px;
-    border: 1px solid #fff;
+    border: 1px solid hsl(0, 0%, 100%);
     border-radius: 3px;
 
     &::placeholder {
-        color: #272733;
+        color: hsl(240, 13%, 18%);
         opacity: 1;
+    }
+
+    &:focus {
+        background-color: hsl(231, 13%, 28%);
+        border-color: hsl(231, 13%, 28%);
+        color: hsl(0, 0%, 100%);
+        &::placeholder {
+            color: hsl(0, 0%, 100%);
+        }
     }
 }

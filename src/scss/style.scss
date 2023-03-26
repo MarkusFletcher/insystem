@@ -1,14 +1,18 @@
-body {
-    background-color: #333;
+*:focus {
+    outline: none;
+}
+
+html.scroll-disable {
+    overflow: hidden;
+    body {
+        overflow: hidden;
+    }
 }
 
 .container {
     max-width: $maxWidthContainer + px;
     margin: 0 auto;
     padding: 0 15px;
-    @media (max-width: $maxWidthContainer) {
-       max-width: $maxWidthContainer + px;
-    }
 }
 
 h1 {
@@ -25,7 +29,37 @@ h1 {
 h2 {
     font-size: 36px;
     font-weight: 900;
+    @media (max-width: $md) {
+        font-size: 28px;
+    }
+    @media (max-width: $sm) {
+        font-size: 24px;
+    }
 }
+
+h3 {
+    font-size: 32px;
+    font-weight: 700;
+    @media (max-width: $md) {
+        font-size: 26px;
+    }
+    @media (max-width: $sm) {
+        font-size: 22px;
+    }
+}
+
+
+h4 {
+    font-size: 28px;
+    font-weight: 700;
+    @media (max-width: $md) {
+        font-size: 22px;
+    }
+    @media (max-width: $sm) {
+        font-size: 18px;
+    }
+}
+
 
 p {
     margin-bottom: 6px;
@@ -36,10 +70,16 @@ p {
         font-weight: 700;
     }
     &-blue {
-        color: $colorText_blue;
+        color: $color-text_blue;
     }
     &-center {
         text-align: center;
+    }
+    &-uppercase {
+        text-transform: uppercase;
+    }
+    &-nowrap {
+        white-space: nowrap;
     }
 }
 

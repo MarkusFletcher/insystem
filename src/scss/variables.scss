@@ -1,8 +1,8 @@
 // Breakpoints--------------------------------------------------------------------------------------
-$sm: 479px; // Мобильный - Small (sm)
-$md: 767px; // Средний - Medium (md)
-$lg: 991px; // Большой - Large (lg)
-$xl: 1199px; // Очень большой - Extra large (xl)
+$sm:   479px; // Мобильный - Small (sm)
+$md:   767px; // Средний - Medium (md)
+$lg:   991px; // Большой - Large (lg)
+$xl:  1199px; // Очень большой - Extra large (xl)
 $xxl: 1399px; // Огромный - Extra extra large (xxl)
 
 // Ширина контейнера
@@ -14,14 +14,17 @@ $footerMinHeight: 80px;
 
 // Шрифт по умолчанию-------------------------------------------------------------------------------
 $fontFamily: "Lato", sans-serif;
-$fontSize: 1rem;
 
 // Цвета--------------------------------------------------------------------------------------------
-$colorPrimary: hsl(204, 69%, 55%);
-$colorPrimary_hover: hsl(204, 69%, 50%);
-$colorPrimary_reflection: hsl(204, 57%, 36%);
+$color-primary: hsl(204, 69%, 55%);             // #3d9cdb
+$color-primary_hover: hsl(204, 69%, 50%);       // #2891d7
+$color-primary_reflection: hsl(204, 57%, 36%);  // #276690
 
-$colorText: hsl(0, 0%, 0%);
-$colorText_dark: hsl(230, 7%, 18%);
-$colorText_light: hsl(0, 0%, 100%);
-$colorText_blue: $colorPrimary;
+$color-secondary: hsl(204, 83%, 59%);           // #40a8ed
+
+$color-link_hover: hsl(204, 85%, 60%);          // #42aaf0
+
+$color-text: hsl(0, 0%, 0%);
+$color-text_dark: hsl(230, 7%, 18%);
+$color-text_light: hsl(0, 0%, 100%);
+$color-text_blue: $color-primary;

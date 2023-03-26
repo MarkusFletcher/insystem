@@ -1,5 +1,5 @@
 .header {
-    background-color: rgba($color: #10101d, $alpha: 0.9);
+    background-color: rgba($color: hsl(240, 29%, 9%), $alpha: 0.9);
     position: fixed;
     top: 0;
     left: 0;
@@ -11,30 +11,13 @@
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
+        gap: 40px;
         min-height: $headerMinHeight;
-    }
+        padding-top: 8px;
+        padding-bottom: 8px;
 
-    &__logo {
-    }
-
-    &__logo-img {
-    }
-
-    &__menu {
-        @media (max-width: $md) {
-            transform: translateX(100vw);
-            top: $headerMinHeight;
-            position: absolute;
-            left: 0;
-            width: 100vw;
-            transition: all .4s;
-            opacity: 0;
-        }
-        &--show {
-            @media (max-width: $md) {
-                opacity: 1;
-                transform: translateX(0);
-            }
+        @media (max-width: $sm) {
+            gap: 8px;
         }
     }
 
@@ -44,8 +27,14 @@
         height: 60px;
         border: none;
         background-color: transparent;
+        
         @media (max-width: $md) {
            display: block;
+        }
+
+        @media (max-width: $md) {
+            width: 40px;
+            height: 40px;
         }
     }
 }

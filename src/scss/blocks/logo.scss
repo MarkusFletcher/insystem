@@ -3,12 +3,18 @@
     font-family: 'Raleway', sans-serif;
     font-weight: 800;
     font-size: 28px;
-    color: #fff;
+    color: hsl(0, 0%, 100%);
+
     @media (max-width: $sm) {
         font-size: 24px;
     }
+
     &__img {
         height: 2rem;
         width: auto;
+    }
+    
+    .text-blue {
+        color: $color-secondary;
     }
 }

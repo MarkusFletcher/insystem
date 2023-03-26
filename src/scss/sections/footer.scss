@@ -1,8 +1,9 @@
 .footer {
+    background-color: hsl(231, 13%, 28%);
     padding-top: 20px;
     padding-bottom: 20px;
     min-height: $footerMinHeight;
-    color: $colorText_light;
+    color: $color-text_light;
 
     &__container {
         display: flex;
@@ -19,32 +20,41 @@
 
     &__copy {
         font-size: 13px;
+
+        @media (max-width: $sm) {
+            font-size: 11px;
+        }
     }
 
     &__payment {
         display: flex;
-        gap: 38px;
+        flex-wrap: wrap;
+        gap: 12px 44px;
+        max-width: 500px;
+        justify-content: center;
+
         @media (max-width: $md) {
             gap: 16px;
-            flex-wrap: wrap;
-            justify-content: space-around;
         }
     }
 
     &__contacts {
         display: flex;
-        gap: 38px;
+        flex-wrap: wrap;
+        gap: 12px 52px;
+        max-width: 350px;
+        justify-content: flex-end;
+
         @media (max-width: $md) {
             gap: 16px;
-            flex-wrap: wrap;
-            justify-content: space-around;
+            justify-content: center;
         }
     }
 
     &__separator {
         width: 1px;
         height: 18px;
-        background-color: #C3C3C3;
+        background-color: hsl(0, 0%, 76%);
 
         @media (max-width: $md) {
             width: 18px;

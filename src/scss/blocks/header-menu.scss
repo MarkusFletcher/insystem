@@ -1,20 +1,40 @@
 .header-menu {
-    &__btn {
-        display: none;
+    @media (max-width: $md) {
+        transform: translateX(100vw);
+        top: $headerMinHeight;
+        position: absolute;
+        left: 0;
+        width: 100vw;
+        height: calc(100vh - $headerMinHeight);
+        transition: all .4s;
+        opacity: 0;
+        overflow-y: auto;
+    }
+
+    &--show {
+        @media (max-width: $md) {
+            opacity: 1;
+            transform: translateX(0);
+        }
     }
 
     &__list {
         list-style-type: none;
         display: flex;
-        gap: 60px;
+        justify-content: flex-end;
+        flex-wrap: wrap;
+        gap: 10px 60px;
 
         @media (max-width: $md) {
             flex-direction: column;
-            background-color: rgba($color: #10101d, $alpha: 0.9);
+            justify-content: flex-start;
+            background-color: rgba($color: hsl(240, 29%, 9%), $alpha: 0.9);
             align-items: center;
             gap: 10px;
             padding-top: 20px;
             padding-bottom: 20px;
+            border-top: 4px solid $color-secondary;
+            box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, 0.3);
         }
     }
 
@@ -27,14 +47,16 @@
     &__link {
         font-size: 13px;
         font-weight: 600;
-        color: $colorText_light;
+        color: $color-text_light;
         transition: color 0.3s;
         text-decoration: none;
         text-transform: uppercase;
+
         &:hover,
         &--current {
-            color: $colorPrimary;
+            color: $color-link_hover;
         }
+
         @media (max-width: $md) {
             display: block;
             padding: 10px 24px 10px 10px;

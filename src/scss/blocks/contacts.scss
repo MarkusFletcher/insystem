@@ -3,8 +3,14 @@
 		text-decoration: none;
 		display: flex;
 		align-items: center;
-		gap: 10px;
+		gap: 12px;
 		font-size: 13px;
-		color: #fff;
+		color: hsl(0, 0%, 100%);
+		transition: color .3s;
+
+		&:hover,
+		&:focus {
+			color: $color-text-blue;
+		}
 	}
 }
